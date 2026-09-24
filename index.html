@@ -81,7 +81,11 @@
   section p { margin: 0 0 18px; }
   section p:last-child { margin-bottom: 0; }
   .cta { text-align: center; padding-top: 10px; }
-  section.contact { border-bottom: none; }
+  section.contact { border-bottom: none; display: flex; align-items: stretch; justify-content: space-between; gap: 24px; }
+  .contact-text { flex: 1 1 auto; min-width: 0; }
+  .contact-mark { flex: 0 0 140px; position: relative; }
+  .contact-mark img { position: absolute; top: 0; right: 0; height: 100%; width: auto; max-width: 100%; object-fit: contain; object-position: right center; }
+  @media (max-width: 480px) { .contact-mark { flex-basis: 84px; } }
   .contact a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--blue); }
   footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
   @media (max-width: 480px) {
@@ -109,9 +113,14 @@
   </section>
 
   <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p><a href="mailto:dkat@dkatsae.com">dkat@dkatsae.com</a></p>
-    <p>Working with teams across Europe and North America.</p>
+    <div class="contact-text">
+      <h2>Contact</h2>
+      <p><a href="mailto:dkat@dkatsae.com">dkat@dkatsae.com</a></p>
+      <p>Working with teams across Europe and North America.</p>
+    </div>
+    <div class="contact-mark">
+      <img src="assets/dk-dubs.png" alt="DK Dubs mark" width="346" height="600">
+    </div>
   </section>
 
 </main>
