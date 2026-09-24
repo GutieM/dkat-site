@@ -7,7 +7,7 @@
 <meta name="description" content="DKAT SAE solves unusual problems where tech, media, and gaming meet. Free alignment call for startups and small businesses.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&family=Cormorant+Garamond:wght@500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
 <link rel="apple-touch-icon" href="assets/favicon-180.png">
@@ -33,7 +33,7 @@
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font: 17px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font: 300 17px/1.7 "Jost", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
   a { color: var(--blue); }
@@ -44,19 +44,20 @@
     border-bottom: 1px solid var(--line);
     text-align: center;
   }
-  .hero .wrap { max-width: 960px; padding: 64px 20px 60px; }
+  .hero .wrap { max-width: 1100px; padding: 64px 20px 60px; }
   .hero .logo { width: min(520px, 82vw); height: auto; display: block; margin: 0 auto; }
   .hero .kicker {
-    font-family: "Italiana", "Cormorant Garamond", Georgia, serif;
-    font-weight: 400;
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    font-weight: 200;
     color: #8a8f98;
-    font-size: clamp(14px, 2vw, 22px);
-    letter-spacing: 0.42em; text-transform: uppercase;
+    font-size: clamp(12px, 1.35vw, 19px);
+    letter-spacing: 0.5em; padding-left: 0.5em;
+    text-transform: uppercase;
     margin: 26px 0 0; white-space: nowrap;
   }
   .hero .tagline {
     font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-    font-weight: 400; font-style: italic;
+    font-weight: 500; font-style: normal;
     color: var(--silver);
     font-size: clamp(22px, 3vw, 32px); line-height: 1.3;
     margin: 30px auto 0; max-width: 640px;
@@ -64,7 +65,8 @@
   .btn {
     display: inline-block;
     background: var(--blue); color: #fff; text-decoration: none;
-    font-weight: 600; padding: 14px 26px; border-radius: 8px;
+    font-family: "Jost", sans-serif; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; font-size: 14px;
+    padding: 15px 30px; border-radius: 4px;
     box-shadow: 0 6px 24px rgba(63,125,255,0.35);
     transition: background .15s, transform .15s;
   }
@@ -72,7 +74,8 @@
 
   section { padding: 56px 0; border-bottom: 1px solid var(--line); }
   section h2 {
-    font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase;
+    font-family: "Jost", sans-serif; font-weight: 500;
+    font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase;
     color: var(--blue); margin: 0 0 18px;
   }
   section p { margin: 0 0 18px; }
@@ -81,7 +84,7 @@
   section.contact { border-bottom: none; }
   .contact a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--blue); }
   footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
-  @media (max-width: 860px) { .hero .kicker { white-space: normal; letter-spacing: 0.3em; line-height: 1.7; } }
+  @media (max-width: 860px) { .hero .kicker { white-space: normal; letter-spacing: 0.34em; padding-left: 0.34em; line-height: 1.9; } }
   @media (max-width: 480px) {
     body { font-size: 16px; }
     section { padding: 44px 0; }
@@ -103,7 +106,7 @@
   <section id="intro">
     <h2>Welcome to DKATSAE.com</h2>
     <p>We specialize in solving unusual problems in the spaces where tech, media, and gaming meet.</p>
-    <p>If you run a startup or small business, send us a short description of what you need. If our domain knowledge meets your needs, we will book a free alignment call. From there, rates are 100 EUR per hour.</p>
+    <p>If you run a startup or small business, send us a short description of what you need. If our domain knowledge meets your needs, we will book a free alignment call. From there, rates are 100.00€ per hour.</p>
     <p class="cta"><a class="btn" href="mailto:dkat@dkatsae.com?subject=Initial%20needs">Contact now</a></p>
   </section>
 
