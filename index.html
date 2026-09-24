@@ -40,27 +40,25 @@
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
 
   header.hero {
-    background: #000;
-    border-bottom: 1px solid var(--line);
+    background: var(--bg);
     text-align: center;
   }
-  .hero .wrap { max-width: 1100px; padding: 64px 20px 60px; }
+  .hero .wrap { max-width: 1100px; padding: 64px 20px 8px; }
   .hero .logo { width: min(520px, 82vw); height: auto; display: block; margin: 0 auto; }
   .hero .kicker {
     font-family: "Oswald", "Arial Narrow", sans-serif;
     font-weight: 200;
     color: #6e727a;
-    font-size: clamp(16px, 1.75vw, 25px);
+    font-size: 20px;
     letter-spacing: 0.5em; word-spacing: 0.7em; padding-left: 0.5em;
     text-transform: uppercase; line-height: 1.7;
-    margin: 26px 0 0;
+    margin: 22px 0 0; white-space: nowrap;
   }
+  .hero .kicker span { display: block; }
   .hero .tagline {
-    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-    font-weight: 500; font-style: normal;
-    color: var(--silver);
-    font-size: clamp(22px, 3vw, 32px); line-height: 1.3;
-    margin: 30px auto 0; max-width: 640px;
+    font: inherit;
+    color: var(--text);
+    margin: 26px auto 0; max-width: 640px;
   }
   .btn {
     display: inline-block;
@@ -84,7 +82,6 @@
   section.contact { border-bottom: none; }
   .contact a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--blue); }
   footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
-  @media (max-width: 860px) { .hero .kicker { letter-spacing: 0.34em; padding-left: 0.34em; word-spacing: 0.4em; } }
   @media (max-width: 480px) {
     body { font-size: 16px; }
     section { padding: 44px 0; }
@@ -96,8 +93,8 @@
 <header class="hero">
   <div class="wrap">
     <img class="logo" src="assets/dkat-logo.png" alt="DKAT SAE" width="1200" height="337">
-    <p class="kicker">Domain Knowledge Automation Tooling<br>Solutions &amp; Engineering</p>
-    <p class="tagline">Solutions that don't fit the standard playbook.</p>
+    <p class="kicker"><span class="l1">Domain Knowledge Automation Tooling</span><span>Solutions &amp; Engineering</span></p>
+    <p class="tagline">For solutions that don't fit the standard playbook.</p>
   </div>
 </header>
 
@@ -122,5 +119,23 @@
   &copy; 2026 DKAT SAE LLC. All rights reserved.
 </footer>
 
+<script>
+(function () {
+  var k = document.querySelector('.hero .kicker');
+  var line = k.querySelector('.l1');
+  var logo = document.querySelector('.hero .logo');
+  function fit() {
+    var target = logo.getBoundingClientRect().width;
+    var fs = parseFloat(getComputedStyle(k).fontSize);
+    var r = document.createRange(); r.selectNodeContents(line);
+    var w = r.getBoundingClientRect().width - 0.5 * fs; /* drop trailing letter-space */
+    if (w > 0) k.style.fontSize = (fs * target / w) + 'px';
+  }
+  function run() { fit(); requestAnimationFrame(fit); }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(run); else run();
+  window.addEventListener('resize', fit);
+  if (logo.complete) run(); else logo.addEventListener('load', run);
+})();
+</script>
 </body>
 </html>
