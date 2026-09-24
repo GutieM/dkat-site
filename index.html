@@ -7,7 +7,7 @@
 <meta name="description" content="DKAT SAE solves unusual problems where tech, media, and gaming meet. Free alignment call for startups and small businesses.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
 <link rel="apple-touch-icon" href="assets/favicon-180.png">
@@ -44,26 +44,22 @@
     border-bottom: 1px solid var(--line);
     text-align: center;
   }
-  .hero .wrap { max-width: 960px; padding: 0 0 56px; }
-  .hero .lockup {
-    width: 100%; height: auto; display: block; margin: 0 auto;
-    -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent);
-    mask-image: linear-gradient(to bottom, #000 70%, transparent);
-  }
-  .hero .text { padding: 0 20px; margin-top: -21vw; position: relative; }
-  @media (min-width: 960px) { .hero .text { margin-top: -212px; } }
+  .hero .wrap { max-width: 960px; padding: 64px 20px 60px; }
+  .hero .logo { width: min(520px, 82vw); height: auto; display: block; margin: 0 auto; }
   .hero .kicker {
-    font-family: "Josefin Sans", "Segoe UI", Helvetica, Arial, sans-serif;
-    font-weight: 300;
+    font-family: "Italiana", "Cormorant Garamond", Georgia, serif;
+    font-weight: 400;
     color: #8a8f98;
-    font-size: clamp(11px, 1.5vw, 16px);
-    letter-spacing: 0.24em; white-space: nowrap; text-transform: uppercase;
-    margin: 0 0 22px;
+    font-size: clamp(14px, 2vw, 22px);
+    letter-spacing: 0.42em; text-transform: uppercase;
+    margin: 26px 0 0; white-space: nowrap;
   }
-  .hero h1 {
-    font-size: clamp(22px, 3.4vw, 30px);
-    font-weight: 500; line-height: 1.35;
-    margin: 0 auto 32px; max-width: 640px;
+  .hero .tagline {
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-weight: 400; font-style: italic;
+    color: var(--silver);
+    font-size: clamp(22px, 3vw, 32px); line-height: 1.3;
+    margin: 30px auto 0; max-width: 640px;
   }
   .btn {
     display: inline-block;
@@ -82,9 +78,10 @@
   section p { margin: 0 0 18px; }
   section p:last-child { margin-bottom: 0; }
   .cta { text-align: center; padding-top: 10px; }
+  section.contact { border-bottom: none; }
   .contact a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--blue); }
   footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
-  @media (max-width: 720px) { .hero .kicker { white-space: normal; } }
+  @media (max-width: 860px) { .hero .kicker { white-space: normal; letter-spacing: 0.3em; line-height: 1.7; } }
   @media (max-width: 480px) {
     body { font-size: 16px; }
     section { padding: 44px 0; }
@@ -95,12 +92,9 @@
 
 <header class="hero">
   <div class="wrap">
-    <img class="lockup" src="assets/hero.jpg" alt="DKAT SAE" width="1920" height="1080">
-    <div class="text">
-      <p class="kicker">Domain Knowledge Automation Tooling Solutions &amp; Engineering</p>
-      <h1>For small teams whose production or QA problems don't fit a standard playbook.</h1>
-      <a class="btn" href="#intro">Get started</a>
-    </div>
+    <img class="logo" src="assets/dkat-logo.png" alt="DKAT SAE" width="1200" height="337">
+    <p class="kicker">Domain Knowledge Automation Tooling Solutions &amp; Engineering</p>
+    <p class="tagline">Solutions that don't fit the standard playbook.</p>
   </div>
 </header>
 
@@ -109,14 +103,14 @@
   <section id="intro">
     <h2>Welcome to DKATSAE.com</h2>
     <p>We specialize in solving unusual problems in the spaces where tech, media, and gaming meet.</p>
-    <p>If you run a startup or small business, email <a href="mailto:dkat@dkatsae.com?subject=Initial%20needs">dkat@dkatsae.com</a> with a short description of what you need. If the domain knowledge fits and we think we can help, we will book a free alignment call. From there, rates are 100 EUR per hour.</p>
-    <p class="cta"><a class="btn" href="mailto:dkat@dkatsae.com?subject=Initial%20needs">Email dkat@dkatsae.com</a></p>
+    <p>If you run a startup or small business, send us a short description of what you need. If our domain knowledge meets your needs, we will book a free alignment call. From there, rates are 100 EUR per hour.</p>
+    <p class="cta"><a class="btn" href="mailto:dkat@dkatsae.com?subject=Initial%20needs">Contact now</a></p>
   </section>
 
   <section id="contact" class="contact">
     <h2>Contact</h2>
     <p><a href="mailto:dkat@dkatsae.com">dkat@dkatsae.com</a></p>
-    <p>Brandon, Florida. Working with teams in the US and Europe.</p>
+    <p>Working with teams across Europe and North America.</p>
   </section>
 
 </main>
