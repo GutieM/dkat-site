@@ -49,12 +49,13 @@
     font-family: "Oswald", "Arial Narrow", sans-serif;
     font-weight: 200;
     color: #6e727a;
-    font-size: 20px;
+    font-size: 14px;
     letter-spacing: 0.5em; word-spacing: 0.7em; padding-left: 0.5em;
     text-transform: uppercase; line-height: 1.7;
     margin: 0 0 22px; white-space: nowrap;
   }
   .hero .kicker span { display: block; }
+  @media (max-width: 900px) { .hero .kicker { white-space: normal; line-height: 2; } }
   .hero .tagline {
     font: inherit; font-size: 1.3em;
     color: var(--text);
@@ -119,23 +120,5 @@
   &copy; 2026 DKAT SAE LLC. All rights reserved.
 </footer>
 
-<script>
-(function () {
-  var k = document.querySelector('.hero .kicker');
-  var line = k.querySelector('.l1');
-  var logo = document.querySelector('.hero .logo');
-  function fit() {
-    var target = logo.getBoundingClientRect().width;
-    var fs = parseFloat(getComputedStyle(k).fontSize);
-    var r = document.createRange(); r.selectNodeContents(line);
-    var w = r.getBoundingClientRect().width - 0.5 * fs; /* drop trailing letter-space */
-    if (w > 0) k.style.fontSize = (fs * target / w) + 'px';
-  }
-  function run() { fit(); requestAnimationFrame(fit); }
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(run); else run();
-  window.addEventListener('resize', fit);
-  if (logo.complete) run(); else logo.addEventListener('load', run);
-})();
-</script>
 </body>
 </html>
