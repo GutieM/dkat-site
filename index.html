@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DKAT SAE</title>
+<meta name="description" content="Domain Knowledge Automation Tooling. Production and QA strategy for small teams whose problems don't fit a standard playbook.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<meta property="og:title" content="DKAT SAE">
+<meta property="og:description" content="Domain Knowledge Automation Tooling. For small teams whose production or QA problems don't fit a standard playbook.">
+<meta property="og:image" content="https://www.dkatsae.com/assets/hero.jpg">
+<meta property="og:url" content="https://www.dkatsae.com/">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --bg: #0b0c0e;
+    --tile: #17191d;
+    --line: #262a31;
+    --text: #e6e8ec;
+    --muted: #9aa1ab;
+    --blue: #3f7dff;
+    --blue-deep: #1f4fc4;
+    --silver: #c9ced6;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--blue); }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+  header.hero {
+    background: #000;
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+  }
+  .hero .wrap { max-width: 960px; padding: 0 0 56px; }
+  .hero .lockup {
+    width: 100%; height: auto; display: block; margin: 0 auto;
+    -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent);
+    mask-image: linear-gradient(to bottom, #000 70%, transparent);
+  }
+  .hero .text { padding: 0 20px; margin-top: -8vw; position: relative; }
+  .hero .kicker {
+    color: var(--silver);
+    font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+    margin: 0 0 12px;
+  }
+  .hero h1 {
+    font-size: clamp(22px, 3.4vw, 30px);
+    font-weight: 500; line-height: 1.35;
+    margin: 0 auto 32px; max-width: 640px;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--blue); color: #fff; text-decoration: none;
+    font-weight: 600; padding: 14px 26px; border-radius: 8px;
+    box-shadow: 0 6px 24px rgba(63,125,255,0.35);
+    transition: background .15s, transform .15s;
+  }
+  .btn:hover { background: var(--blue-deep); transform: translateY(-1px); }
+
+  section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+  section h2 {
+    font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--blue); margin: 0 0 18px;
+  }
+  section p { margin: 0 0 18px; }
+  section p:last-child { margin-bottom: 0; }
+  .card {
+    background: var(--tile); border: 1px solid var(--line);
+    border-radius: 12px; padding: 22px 24px;
+  }
+  .card strong { color: var(--silver); }
+  .cta { text-align: center; }
+  .cta .btn { margin-top: 8px; }
+  .contact a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--blue); }
+  footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
+  @media (max-width: 480px) {
+    body { font-size: 16px; }
+    section { padding: 44px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="lockup" src="assets/hero.jpg" alt="DKAT SAE" width="1920" height="1080">
+    <div class="text">
+      <p class="kicker">Domain Knowledge Automation Tooling</p>
+      <h1>For small teams whose production or QA problems don't fit a standard playbook.</h1>
+      <a class="btn" href="#work-with-me">Book a fit call</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="what-i-do">
+    <h2>What I do</h2>
+    <p>Most small studios and startups hit the same wall. Production is bottlenecked somewhere, testing is either missing or eating the schedule, and nobody has time to step back and work out what the operation actually needs.</p>
+    <p>That is the work I do. I evaluate QA strategy, untangle production issues, and help you decide what to build, what to buy, and what to skip. When the right answer is a custom tool or a small app, I build it. When the right answer is a process change and no new software, I will tell you that too.</p>
+  </section>
+
+  <section id="who">
+    <h2>Who you are working with</h2>
+    <p>I come from years of hands-on QA and IT with a heavy lean toward art and content pipelines, a combination most consultants don't have. I have shipped tools, owned test strategy, and sat inside production long enough to know where the time actually goes.</p>
+    <p>I use AI where it genuinely shortens the path. A lot of teams are using it to create more work for themselves right now, and part of my job is making sure you are not one of them.</p>
+  </section>
+
+  <section id="work">
+    <h2>Recent work</h2>
+    <div class="card">
+      <strong>Phoenix and Fox Academy</strong><br>
+      Production and tooling work. Case study coming soon.
+    </div>
+  </section>
+
+  <section id="work-with-me" class="cta">
+    <h2>How to work with me</h2>
+    <p>It starts with a free one-hour fit call. You send a short description of the problem ahead of time, we spend the hour on it, and you leave with either a scoped proposal or an honest referral to someone better suited.</p>
+    <p>From there, consulting is billed hourly. If you want me hands-on inside your production for a stretch, that is a weekly engagement, and we will talk about it on the call.</p>
+    <a class="btn" href="mailto:dkat@dkatsae.com?subject=Fit%20call%20request">Book a fit call</a>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p><a href="mailto:dkat@dkatsae.com">dkat@dkatsae.com</a></p>
+    <p>Brandon, Florida. Working with teams in the US and Europe.</p>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 DKAT SAE LLC. All rights reserved.
+</footer>
+
+</body>
+</html>
